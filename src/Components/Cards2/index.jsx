@@ -2,21 +2,21 @@ import { useState } from "react";
 import rating_icon from "../../assets/rating-icon.svg";
 import IncDec from "../inc-dec";
 import likes_svg from "../../assets/likes.svg";
+import qizil_likes from "../../assets/heart-solid.svg";
 
 function Cards(props) {
-  const [color, setColor] = useState("");
+  const [color, setColor] = useState(likes_svg);
 
   function like_bosish() {
-    setColor((rang) => (rang === "" ? "red" : ""));
+    setColor((rang) => (rang === likes_svg ? qizil_likes : likes_svg));
   }
   return (
     <div className="w-[232px] h-[472px] mx-auto">
       <div className="relative">
         <img
           onClick={like_bosish}
-          className="absolute right-2 top-2 cursor-pointer"
-          style={{ background: color }}
-          src={likes_svg}
+          className="absolute right-2 top-2 cursor-pointer w-6"
+          src={color}
           alt=""
         />
         <img src={props.rasm} alt="" />
