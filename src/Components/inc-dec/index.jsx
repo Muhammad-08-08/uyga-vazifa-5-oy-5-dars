@@ -6,12 +6,12 @@ function IncDec() {
     setNumber((qosh) => (qosh === 0 ? 0 : qosh - 1));
   }
   return (
-    <div className="w-[100px] h-[40px] bg-slate-500 flex items-center gap-5">
+    <div className="w-[100px] h-[40px] flex items-center gap-5">
       <button
         onClick={() => {
           setNumber(number + 1);
         }}
-        className="text-[25px]"
+        className="text-[25px] w-8 h-8 bg-blue-500 box-border"
       >
         +
       </button>

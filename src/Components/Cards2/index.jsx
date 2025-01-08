@@ -1,5 +1,7 @@
 import { useState } from "react";
-import IncDec from "./Components/inc-dec";
+import rating_icon from "../../assets/rating-icon.svg";
+import IncDec from "../inc-dec";
+import likes_svg from "../../assets/likes.svg";
 
 function Cards(props) {
   const [color, setColor] = useState("");
@@ -48,3 +50,5 @@ function Cards(props) {
     </div>
   );
 }
+
+export default Cards;

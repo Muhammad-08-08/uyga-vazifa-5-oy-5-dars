@@ -1,7 +1,6 @@
-import likes_svg from "../../assets/likes.svg";
 import elektr_pech from "../../assets/elektr-pech.png";
-import rating_icon from "../../assets/rating-icon.svg";
 import bag_svg from "../../assets/bag-svg.svg";
+import Cards from "../Cards2";
 
 function Card() {
   const cardlar = [
@@ -126,6 +125,5 @@ function Card() {
     </div>
   );
 }
-
 
 export default Card;
