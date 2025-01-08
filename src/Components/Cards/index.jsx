@@ -1,7 +1,8 @@
-import likes_svg from "../../assets/likes_svg.svg";
+import likes_svg from "../../assets/likes.svg";
 import elektr_pech from "../../assets/elektr-pech.png";
 import rating_icon from "../../assets/rating-icon.svg";
 import bag_svg from "../../assets/bag-svg.svg";
+import { useState } from "react";
 
 function Card() {
   const cardlar = [
@@ -128,10 +129,21 @@ function Card() {
 }
 
 function Cards(props) {
+  const [color, setColor] = useState("");
+
+  function like_bosish() {
+    setColor((rang) => (rang === "" ? "red" : ""));
+  }
   return (
     <div className="w-[232px] h-[472px] mx-auto">
       <div className="relative">
-        <img className="absolute right-2 top-2" src={likes_svg} alt="" />
+        <img
+          onClick={like_bosish}
+          className="absolute right-2 top-2 cursor-pointer"
+          style={{ background: color }}
+          src={likes_svg}
+          alt=""
+        />
         <img src={props.rasm} alt="" />
         <p className="px-3  text-[13px] text-white  bg-[#3B007D] absolute left-2 bottom-2 rounded-lg">
           Aksiya
