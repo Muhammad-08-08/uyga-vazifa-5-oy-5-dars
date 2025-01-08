@@ -39,7 +39,7 @@ function Cards(props) {
             <del className="text-[11.2px] text-[#8B8E99]">
               {props.eski_narx}
             </del>
-            <h4 className="text-[14px] text-[#1F2026] font-medium">
+            <h4 className="text-[12.5px] text-[#1F2026] font-medium">
               {props.chegirma_narx}
             </h4>
           </div>
