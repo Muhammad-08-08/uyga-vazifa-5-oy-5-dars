@@ -4,7 +4,16 @@ import IncDec from "../inc-dec";
 import likes_svg from "../../assets/likes.svg";
 import qizil_likes from "../../assets/heart-solid.svg";
 
-function Cards(props) {
+function Cards({
+  rasm,
+  malumot,
+  rating,
+  sharh,
+  oyiga_tolov,
+  eski_narx,
+  chegirma_narx,
+  bag_svg,
+}) {
   const [color, setColor] = useState(likes_svg);
 
   function like_bosish() {
@@ -19,32 +28,30 @@ function Cards(props) {
           src={color}
           alt=""
         />
-        <img src={props.rasm} alt="" />
+        <img src={rasm} alt="" />
         <p className="px-3  text-[13px] text-white  bg-[#3B007D] absolute left-2 bottom-2 rounded-lg">
           Aksiya
         </p>
       </div>
       <div className="pl-4">
-        <p className="text-[12.8px] mt-3">{props.malumot}</p>
+        <p className="text-[12.8px] mt-3">{malumot}</p>
         <div className="flex gap-2 items-center mt-1 mb-2">
           <img src={rating_icon} alt="" />
-          <p className="text-[11.2px] text-[#8B8E99]">{props.rating}</p>
-          <p className="text-[11.2px] text-[#8B8E99]">{props.sharh}</p>
+          <p className="text-[11.2px] text-[#8B8E99]">{rating}</p>
+          <p className="text-[11.2px] text-[#8B8E99]">{sharh}</p>
         </div>
         <p className="px-2 bg-[#FFFF00] w-max text-[11px] text-[#1F1F26]">
-          {props.oyiga_tolov}
+          {oyiga_tolov}
         </p>
         <div className="flex justify-between items-center gap-2 mt-5">
           <div>
-            <del className="text-[11.2px] text-[#8B8E99]">
-              {props.eski_narx}
-            </del>
+            <del className="text-[11.2px] text-[#8B8E99]">{eski_narx}</del>
             <h4 className="text-[12.5px] text-[#1F2026] font-medium">
-              {props.chegirma_narx}
+              {chegirma_narx}
             </h4>
           </div>
           <IncDec />
-          <img src={props.bag_svg} alt="" />
+          <img src={bag_svg} alt="" />
         </div>
       </div>
     </div>
