@@ -1,10 +1,10 @@
 import Card from "./Components/Cards";
-import OsonQidiruv from "./Components/oson_qidiruv";
+import Navbar from "./Components/navbar";
 
 function App() {
   return (
     <div>
-      <OsonQidiruv />
+      <Navbar />
       <Card />
     </div>
   );
