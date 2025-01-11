@@ -5,6 +5,7 @@ import Cards from "../Cards2";
 function Card() {
   const cardlar = [
     {
+      id: 1,
       rasm: elektr_pech,
       malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
       rating: "5.0",
@@ -15,6 +16,7 @@ function Card() {
       chegirma_narx: "350 000 so'm",
     },
     {
+      id: 2,
       rasm: elektr_pech,
       malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
       rating: "5.0",
@@ -25,6 +27,7 @@ function Card() {
       chegirma_narx: "350 000 so'm",
     },
     {
+      id: 3,
       rasm: elektr_pech,
       malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
       rating: "5.0",
@@ -35,6 +38,7 @@ function Card() {
       chegirma_narx: "350 000 so'm",
     },
     {
+      id: 4,
       rasm: elektr_pech,
       malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
       rating: "5.0",
@@ -45,6 +49,7 @@ function Card() {
       chegirma_narx: "350 000 so'm",
     },
     {
+      id: 5,
       rasm: elektr_pech,
       malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
       rating: "5.0",
@@ -55,6 +60,7 @@ function Card() {
       chegirma_narx: "350 000 so'm",
     },
     {
+      id: 6,
       rasm: elektr_pech,
       malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
       rating: "5.0",
@@ -65,6 +71,7 @@ function Card() {
       chegirma_narx: "350 000 so'm",
     },
     {
+      id: 7,
       rasm: elektr_pech,
       malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
       rating: "5.0",
@@ -75,6 +82,7 @@ function Card() {
       chegirma_narx: "350 000 so'm",
     },
     {
+      id: 8,
       rasm: elektr_pech,
       malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
       rating: "5.0",
@@ -85,6 +93,7 @@ function Card() {
       chegirma_narx: "350 000 so'm",
     },
     {
+      id: 9,
       rasm: elektr_pech,
       malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
       rating: "5.0",
@@ -95,6 +104,7 @@ function Card() {
       chegirma_narx: "350 000 so'm",
     },
     {
+      id: 10,
       rasm: elektr_pech,
       malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
       rating: "5.0",
@@ -111,6 +121,7 @@ function Card() {
       {cardlar.map((item) => {
         return (
           <Cards
+            key={item.id}
             rasm={item.rasm}
             malumot={item.malumot}
             rating={item.rating}
