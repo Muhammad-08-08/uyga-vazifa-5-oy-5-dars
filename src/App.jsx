@@ -1,13 +1,14 @@
+import { useState } from "react";
 import Card from "./Components/Cards";
 import Navbar from "./Components/navbar";
-import Korzina from "./Components/korzina";
 
 function App() {
+  const [cardState, setCardState] = useState([]);
+
   return (
     <div>
       <Navbar />
-      <Korzina />
-      <Card />
+      <Card cardState={cardState} setCardState={setCardState} />
     </div>
   );
 }

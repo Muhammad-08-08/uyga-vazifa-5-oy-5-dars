@@ -3,7 +3,7 @@ function Korzina({ cardState, setCardState }) {
     setCardState([]);
   };
 
-  const o‘chirish = (index) => {
+  const ochirish = (index) => {
     const newCardState = cardState.filter((_, i) => i !== index);
     setCardState(newCardState);
   };
@@ -19,13 +19,16 @@ function Korzina({ cardState, setCardState }) {
             img={item.rasm}
             name={item.name}
             narx={item.narx}
-            delete02Icon={<button onClick={() => o‘chirish(index)}>O‘chirish</button>}
+            delete1={<button onClick={() => ochirish(index)}>O'chirish</button>}
           />
         ))
       )}
 
       <div className="flex gap-5">
-        <button className="w-[105px] h-[37px] bg-[#7000FF] text-white rounded-md" onClick={tozalash}>
+        <button
+          className="w-[105px] h-[37px] bg-[#7000FF] text-white rounded-md"
+          onClick={tozalash}
+        >
           Tozalash
         </button>
         <button className="w-[105px] h-[37px] bg-[#3636361C] rounded-md">
@@ -36,7 +39,7 @@ function Korzina({ cardState, setCardState }) {
   );
 }
 
-function Korzina_kard({ img, name, narx, delete02Icon }) {
+function Korzina_kard({ img, name, narx, delete1 }) {
   return (
     <div className="flex items-center gap-5">
       <img className="w-20" src={img} alt="Mahsulot rasmi" />
@@ -44,7 +47,7 @@ function Korzina_kard({ img, name, narx, delete02Icon }) {
         <p className="text-[18px]">{name}</p>
         <p className="text-[20px] font-bold">{narx}</p>
       </div>
-      <div>{delete02Icon}</div>
+      <div>{delete1}</div>
     </div>
   );
 }
