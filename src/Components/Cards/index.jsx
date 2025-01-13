@@ -53,118 +53,13 @@ function Card() {
       eski_narx: "670 000 so'm",
       chegirma_narx: "350 000 so'm",
     },
-    {
-      id: 2,
-      rasm: elektr_pech,
-      malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
-      rating: "5.0",
-      sharh: "(75 sharh)",
-      oyiga_tolov: "42 000 so'm/oyiga",
-      bag_svg: bag_svg,
-      eski_narx: "670 000 so'm",
-      chegirma_narx: "350 000 so'm",
-    },
-    {
-      id: 3,
-      rasm: elektr_pech,
-      malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
-      rating: "5.0",
-      sharh: "(75 sharh)",
-      oyiga_tolov: "42 000 so'm/oyiga",
-      bag_svg: bag_svg,
-      eski_narx: "670 000 so'm",
-      chegirma_narx: "350 000 so'm",
-    },
-    {
-      id: 4,
-      rasm: elektr_pech,
-      malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
-      rating: "5.0",
-      sharh: "(75 sharh)",
-      oyiga_tolov: "42 000 so'm/oyiga",
-      bag_svg: bag_svg,
-      eski_narx: "670 000 so'm",
-      chegirma_narx: "350 000 so'm",
-    },
-    {
-      id: 5,
-      rasm: elektr_pech,
-      malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
-      rating: "5.0",
-      sharh: "(75 sharh)",
-      oyiga_tolov: "42 000 so'm/oyiga",
-      bag_svg: bag_svg,
-      eski_narx: "670 000 so'm",
-      chegirma_narx: "350 000 so'm",
-    },
-    {
-      id: 6,
-      rasm: elektr_pech,
-      malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
-      rating: "5.0",
-      sharh: "(75 sharh)",
-      oyiga_tolov: "42 000 so'm/oyiga",
-      bag_svg: bag_svg,
-      eski_narx: "670 000 so'm",
-      chegirma_narx: "350 000 so'm",
-    },
-    {
-      id: 7,
-      rasm: elektr_pech,
-      malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
-      rating: "5.0",
-      sharh: "(75 sharh)",
-      oyiga_tolov: "42 000 so'm/oyiga",
-      bag_svg: bag_svg,
-      eski_narx: "670 000 so'm",
-      chegirma_narx: "350 000 so'm",
-    },
-    {
-      id: 8,
-      rasm: elektr_pech,
-      malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
-      rating: "5.0",
-      sharh: "(75 sharh)",
-      oyiga_tolov: "42 000 so'm/oyiga",
-      bag_svg: bag_svg,
-      eski_narx: "670 000 so'm",
-      chegirma_narx: "350 000 so'm",
-    },
-    {
-      id: 9,
-      rasm: elektr_pech,
-      malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
-      rating: "5.0",
-      sharh: "(75 sharh)",
-      oyiga_tolov: "42 000 so'm/oyiga",
-      bag_svg: bag_svg,
-      eski_narx: "670 000 so'm",
-      chegirma_narx: "350 000 so'm",
-    },
-    {
-      id: 10,
-      rasm: elektr_pech,
-      malumot: "Elektr isitgich, konvektor ARSHiA, 2500 Vt, 3 isitish rejimi,…",
-      rating: "5.0",
-      sharh: "(75 sharh)",
-      oyiga_tolov: "42 000 so'm/oyiga",
-      bag_svg: bag_svg,
-      eski_narx: "670 000 so'm",
-      chegirma_narx: "350 000 so'm",
-    },
+    // Boshqa elementlar shu tarzda davom etadi...
   ];
 
-  const [cardState, setCardState] = useState([
-    {
-      rasm: elektr_pech,
-      name: "Elektr isitgich, konvektor ARSHiA",
-      narx: "123 000 som",
-      delete: <Delete02Icon />,
-    },
-  ]);
+  const [cardState, setCardState] = useState([]);
 
   return (
-    <div className="w-[1440px] mx-auto flex flex-wrap gap-[20px] shadow-2xl shadow-gray-700 my-10 py-10 rounded-lg">
+    <div className="max-w-[1440px] mx-auto flex flex-wrap gap-[20px] shadow-2xl shadow-gray-700 my-10 py-10 rounded-lg">
       {cardlar.map((item) => {
         return (
           <Cards

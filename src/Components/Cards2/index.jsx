@@ -22,6 +22,18 @@ function Cards({
     setColor((rang) => (rang === likes_svg ? qizil_likes : likes_svg));
   }
 
+  function savatchaga_qoshish() {
+    const new_arr = [
+      ...cardState,
+      {
+        rasm: rasm,
+        narx: chegirma_narx,
+        name: malumot,
+      },
+    ];
+    setCardState(new_arr);
+  }
+
   return (
     <div className="w-[232px] h-[472px] mx-auto">
       <div className="relative">
@@ -29,17 +41,17 @@ function Cards({
           onClick={like_bosish}
           className="absolute right-2 top-2 cursor-pointer w-6"
           src={color}
-          alt=""
+          alt="Like"
         />
-        <img src={rasm} alt="" />
-        <p className="px-3  text-[13px] text-white  bg-[#3B007D] absolute left-2 bottom-2 rounded-lg">
+        <img src={rasm} alt="Mahsulot" />
+        <p className="px-3 text-[13px] text-white bg-[#3B007D] absolute left-2 bottom-2 rounded-lg">
           Aksiya
         </p>
       </div>
       <div className="pl-4">
         <p className="text-[12.8px] mt-3">{malumot}</p>
         <div className="flex gap-2 items-center mt-1 mb-2">
-          <img src={rating_icon} alt="" />
+          <img src={rating_icon} alt="Rating" />
           <p className="text-[11.2px] text-[#8B8E99]">{rating}</p>
           <p className="text-[11.2px] text-[#8B8E99]">{sharh}</p>
         </div>
@@ -55,18 +67,10 @@ function Cards({
           </div>
           <IncDec />
           <img
-            onClick={() => {
-              const new_arr = cardState.concat([
-                {
-                  rasm: rasm,
-                  narx: narx,
-                  name: name,
-                },
-              ]);
-              setCardState(new_arr);
-            }}
+            onClick={savatchaga_qoshish}
             src={bag_svg}
-            alt=""
+            alt="Savatchaga qo'shish"
+            className="cursor-pointer"
           />
         </div>
       </div>
