@@ -18,21 +18,18 @@ function Cards({
 }) {
   const [color, setColor] = useState(likes_svg);
 
-  function like_bosish() {
+  const like_bosish = () => {
     setColor((rang) => (rang === likes_svg ? qizil_likes : likes_svg));
-  }
+  };
 
-  function savatchaga_qoshish() {
-    const new_arr = [
-      ...cardState,
-      {
-        rasm: rasm,
-        narx: chegirma_narx,
-        name: malumot,
-      },
-    ];
-    setCardState(new_arr);
-  }
+  const savatchaga_qoshish = () => {
+    const newCard = {
+      rasm,
+      narx: chegirma_narx,
+      name: malumot,
+    };
+    setCardState([...cardState, newCard]);
+  };
 
   return (
     <div className="w-[232px] h-[472px] mx-auto">
