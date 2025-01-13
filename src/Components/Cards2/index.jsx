@@ -13,12 +13,15 @@ function Cards({
   eski_narx,
   chegirma_narx,
   bag_svg,
+  setCardState,
+  cardState,
 }) {
   const [color, setColor] = useState(likes_svg);
 
   function like_bosish() {
     setColor((rang) => (rang === likes_svg ? qizil_likes : likes_svg));
   }
+
   return (
     <div className="w-[232px] h-[472px] mx-auto">
       <div className="relative">
@@ -51,7 +54,20 @@ function Cards({
             </h4>
           </div>
           <IncDec />
-          <img src={bag_svg} alt="" />
+          <img
+            onClick={() => {
+              const new_arr = cardState.concat([
+                {
+                  rasm: rasm,
+                  narx: narx,
+                  name: name,
+                },
+              ]);
+              setCardState(new_arr);
+            }}
+            src={bag_svg}
+            alt=""
+          />
         </div>
       </div>
     </div>
