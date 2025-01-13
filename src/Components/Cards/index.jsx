@@ -121,23 +121,25 @@ function Card() {
   const [cardState, setCardState] = useState([]);
 
   return (
-    <div className="max-w-[1440px] mx-auto flex flex-wrap gap-[20px] shadow-2xl shadow-gray-700 my-10 py-10 rounded-lg">
+    <div className="">
       <Korzina cardState={cardState} setCardState={setCardState} />
-      {cardlar.map((item) => (
-        <Cards
-          key={item.id}
-          rasm={item.rasm}
-          malumot={item.malumot}
-          rating={item.rating}
-          sharh={item.sharh}
-          oyiga_tolov={item.oyiga_tolov}
-          eski_narx={item.eski_narx}
-          chegirma_narx={item.chegirma_narx}
-          bag_svg={item.bag_svg}
-          setCardState={setCardState}
-          cardState={cardState}
-        />
-      ))}
+      <div className="max-w-[1440px] mx-auto flex flex-wrap gap-[20px] shadow-2xl shadow-gray-700 my-10 py-10 rounded-lg">
+        {cardlar.map((item) => (
+          <Cards
+            key={item.id}
+            rasm={item.rasm}
+            malumot={item.malumot}
+            rating={item.rating}
+            sharh={item.sharh}
+            oyiga_tolov={item.oyiga_tolov}
+            eski_narx={item.eski_narx}
+            chegirma_narx={item.chegirma_narx}
+            bag_svg={item.bag_svg}
+            setCardState={setCardState}
+            cardState={cardState}
+          />
+        ))}
+      </div>
     </div>
   );
 }
